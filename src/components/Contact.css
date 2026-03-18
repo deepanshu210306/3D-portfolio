@@ -1,0 +1,93 @@
+.contact {
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+.contact-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: radial-gradient(circle at top, rgba(162, 0, 0, 0.05) 0%, transparent 60%);
+}
+
+.contact-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  color: var(--color-text);
+  line-height: 1.1;
+  margin-bottom: 5rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.contact-kicker {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.contact-actions {
+  margin-bottom: 6rem;
+}
+
+.email-link {
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--color-border);
+  transition: all 0.4s ease;
+  font-weight: 300;
+}
+
+.email-link .arrow {
+  color: var(--color-accent);
+  transition: transform 0.4s ease;
+}
+
+.email-link:hover {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+
+.email-link:hover .arrow {
+  transform: translate(5px, -5px);
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  transition: all 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.social-item:hover {
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  transform: translateY(-3px);
+}
