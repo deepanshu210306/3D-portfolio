@@ -12,11 +12,13 @@
   align-items: center;
   gap: 4rem;
   width: 100%;
+  margin-top: 5rem;
 }
 
 @media (min-width: 992px) {
   .hero-layout {
     grid-template-columns: 1fr 1fr;
+    margin-top: 0;
   }
 }
 
@@ -35,7 +37,7 @@
 }
 
 .hero-name {
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(3rem, 10vw, 7rem);
   line-height: 1;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -75,7 +77,7 @@
   transform: translate(-50%, -50%);
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(178,0,0,0.15) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(230,57,70,0.1) 0%, rgba(0,0,0,0) 70%);
   filter: blur(40px);
   z-index: -1;
 }
@@ -102,4 +104,20 @@
 @keyframes scrollDrop {
   0% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(100px); opacity: 0; }
+}
+
+/* Mobile Overrides */
+@media (max-width: 768px) {
+  .hero-3d-block {
+    height: 350px;
+  }
+  .hero-3d-block::before {
+    width: 250px;
+    height: 250px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
 }

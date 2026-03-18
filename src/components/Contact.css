@@ -38,7 +38,7 @@
 
 .email-link {
   font-family: var(--font-body);
-  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-size: clamp(1rem, 3vw, 2.5rem);
   color: var(--color-text-muted);
   display: inline-flex;
   align-items: center;
@@ -47,6 +47,7 @@
   border-bottom: 2px solid var(--color-border);
   transition: all 0.4s ease;
   font-weight: 300;
+  word-break: break-all;
 }
 
 .email-link .arrow {
@@ -90,4 +91,14 @@
   background-color: var(--color-text);
   border-color: var(--color-text);
   transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 3rem 1.5rem;
+  }
+  .social-item {
+    width: 100%;
+    justify-content: center;
+  }
 }

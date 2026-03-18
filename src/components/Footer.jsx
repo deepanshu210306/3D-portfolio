@@ -13,8 +13,8 @@ const Footer = () => {
           © {new Date().getFullYear()} Deepanshu. Forged with React & Passion.
         </p>
         <div className="footer-links">
-          <a href="https://github.com/deepanshu" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/deepanshu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/deepanshu210306" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/deephisariya/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:deepanshu210306@gmail.com">Email</a>
         </div>
       </div>

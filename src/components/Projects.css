@@ -2,10 +2,6 @@
   background-color: var(--color-bg);
 }
 
-.title-icon {
-  color: var(--color-accent);
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -126,4 +122,10 @@
   border-color: var(--color-accent);
   color: #fff;
   transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1.5rem;
+  }
 }

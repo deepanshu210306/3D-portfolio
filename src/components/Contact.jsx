@@ -44,13 +44,13 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a href="https://github.com/deepanshu" target="_blank" rel="noopener noreferrer" className="social-item">
+            <a href="https://github.com/deepanshu210306" target="_blank" rel="noopener noreferrer" className="social-item">
               <Github size={20} /> GitHub
             </a>
-            <a href="https://linkedin.com/in/deepanshu" target="_blank" rel="noopener noreferrer" className="social-item">
+            <a href="https://www.linkedin.com/in/deephisariya/" target="_blank" rel="noopener noreferrer" className="social-item">
               <Linkedin size={20} /> LinkedIn
             </a>
-            <a href="https://leetcode.com/deepanshu" target="_blank" rel="noopener noreferrer" className="social-item">
+            <a href="https://leetcode.com/u/deep_hisariya/" target="_blank" rel="noopener noreferrer" className="social-item">
               <Code size={20} /> LeetCode
             </a>
           </motion.div>

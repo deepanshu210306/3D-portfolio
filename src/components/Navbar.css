@@ -77,8 +77,14 @@
   transform-origin: left;
 }
 
+/* Mobile Layout Fix */
 @media (max-width: 768px) {
   .nav-menu {
-    display: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .nav-item {
+    font-size: 0.65rem;
   }
 }

@@ -77,3 +77,9 @@
   color: var(--color-text);
   transform: translateX(5px);
 }
+
+@media (max-width: 768px) {
+  .skill-group {
+    padding: 1.5rem;
+  }
+}

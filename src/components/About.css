@@ -15,10 +15,6 @@
   }
 }
 
-.title-icon {
-  color: var(--color-accent);
-}
-
 .about-block {
   padding: 3.5rem;
   border-left: 2px solid var(--color-accent);
@@ -92,4 +88,11 @@
   border-top: 1px solid var(--color-border);
   padding-top: 1.5rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-block {
+    padding: 1.5rem 1rem;
+    border-left-width: 4px;
+  }
 }
