@@ -1,0 +1,136 @@
+.internship {
+  background-color: var(--color-bg);
+}
+
+.internship-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.internship-card {
+  width: 100%;
+  padding: 2.5rem 3rem;
+  border-left: 2px solid var(--color-accent);
+  transition: transform 0.4s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  background: rgba(20, 20, 20, 0.6);
+}
+
+.internship-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.internship-role {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.internship-org {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+}
+
+.internship-org span {
+  color: var(--color-accent);
+  margin-left: 0.35rem;
+}
+
+.internship-repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1.25rem;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.internship-repo:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.internship-card-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 992px) {
+  .internship-card-body {
+    grid-template-columns: minmax(220px, 0.9fr) 1.4fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.internship-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.internship-intro strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.internship-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.internship-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  font-weight: 300;
+}
+
+.internship-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .internship-card {
+    padding: 1.5rem 1rem;
+    border-left-width: 4px;
+  }
+
+  .internship-header {
+    flex-direction: column;
+  }
+}

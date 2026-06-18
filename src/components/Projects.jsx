@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, SwatchBook } from 'lucide-react';
+import SectionTitle from './SectionTitle';
 import './Projects.css';
 
 const projects = [
@@ -26,11 +27,11 @@ const projects = [
     link: "https://github.com/deepanshu210306"
   },
   {
-    title: "Flight Route Planner",
-    date: "Nov 2024",
-    description: "Flight route optimizer applying BFS & Dijkstra's algorithms. Engineered with relaxation logic.",
-    tags: ["Python", "Algorithms"],
-    link: "https://github.com/deepanshu210306"
+    title: "3D Portfolio",
+    date: "2026",
+    description: "Samurai-themed developer portfolio with a procedural 3D katana, React Three Fiber scene, and cinematic motion design.",
+    tags: ["React", "Three.js", "Vite"],
+    link: "https://github.com/deepanshu210306/3D-portfolio"
   },
   {
     title: "Information Retrieval Engine",
@@ -59,7 +60,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <SwatchBook className="title-icon" size={32} /> Campaigns
+          <SectionTitle icon={SwatchBook} title="Senji" kicker="戦事" />
         </motion.h2>
 
         <div className="projects-grid">

@@ -20,10 +20,11 @@ const Navbar = () => {
           <span className="brand-dot">.</span>
         </a>
         <div className="nav-menu">
-          <a href="#about" className="nav-item">About</a>
-          <a href="#skills" className="nav-item">Expertise</a>
-          <a href="#projects" className="nav-item">Work</a>
-          <a href="#contact" className="nav-item">Contact</a>
+          <a href="#about" className="nav-item">Michi</a>
+          <a href="#internship" className="nav-item">Shugyō</a>
+          <a href="#skills" className="nav-item">Buki</a>
+          <a href="#projects" className="nav-item">Senji</a>
+          <a href="#contact" className="nav-item">Renraku</a>
         </div>
       </div>
     </nav>

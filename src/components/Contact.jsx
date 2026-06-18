@@ -1,12 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Github, Linkedin, Code } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Code, Scroll } from 'lucide-react';
+import SectionTitle from './SectionTitle';
 import './Contact.css';
 
 const Contact = () => {
   return (
     <section id="contact" className="contact section-padding">
       <div className="container">
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <SectionTitle icon={Scroll} title="Renraku" kicker="連絡" />
+        </motion.h2>
+
         <motion.div
           className="contact-wrapper glass-panel"
           initial={{ opacity: 0, scale: 0.95 }}

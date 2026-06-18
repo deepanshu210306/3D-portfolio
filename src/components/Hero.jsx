@@ -14,7 +14,10 @@ const Hero = () => {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <div className="hero-kicker">IIT Delhi Engineer</div>
-            <h1 className="hero-name">Deepanshu</h1>
+            <h1 className="hero-name">
+              Deepanshu
+              <span className="hero-name-kicker">ディーパンシュ</span>
+            </h1>
             <p className="hero-subtext">
               Forging digital experiences with precision. Web Development, Game Engines, and Architectures.
             </p>

@@ -42,6 +42,20 @@
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.25rem;
+}
+
+.hero-name-kicker {
+  font-size: clamp(1rem, 3.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  text-transform: none;
+  font-family: var(--font-body);
+  line-height: 1.2;
 }
 
 .hero-subtext {

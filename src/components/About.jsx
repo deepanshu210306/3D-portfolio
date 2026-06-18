@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Flag, SquareTerminal } from 'lucide-react';
+import SectionTitle from './SectionTitle';
 import './About.css';
 
 const About = () => {
@@ -14,7 +15,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <SquareTerminal className="title-icon" size={32} /> The Path
+          <SectionTitle icon={SquareTerminal} title="Michi" kicker="道" />
         </motion.h2>
 
         <div className="about-grid">
@@ -46,8 +47,12 @@ const About = () => {
               <h3>Leadership</h3>
             </div>
             <div className="leadership-item">
+              <h4>Overall Coordinator</h4>
+              <p className="leadership-meta">Energy Society, IIT Delhi <span>[May 2026 - Present]</span></p>
+            </div>
+            <div className="leadership-item">
               <h4>Design and Operations Coordinator</h4>
-              <p className="leadership-meta">Energy Society, IIT Delhi <span>[Jun 2025 - Present]</span></p>
+              <p className="leadership-meta">Energy Society, IIT Delhi <span>[Jun 2025 - Apr 2026]</span></p>
             </div>
             <div className="leadership-item">
               <h4>Operations Executive</h4>

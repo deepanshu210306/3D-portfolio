@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, MonitorPlay, ShieldCheck } from 'lucide-react';
+import { Code2, MonitorPlay, ShieldCheck, Swords } from 'lucide-react';
+import SectionTitle from './SectionTitle';
 import './Skills.css';
 
 const Skills = () => {
@@ -13,12 +14,12 @@ const Skills = () => {
     {
       title: "Frameworks",
       icon: <MonitorPlay size={24} />,
-      items: ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS"]
+      items: ["React", "Next.js", "Node.js", "Express", "MongoDB"]
     },
     {
       title: "Developer Tools",
       icon: <ShieldCheck size={24} />,
-      items: ["Git", "GitHub", "AutoCAD", "Figma", "Unity"]
+      items: ["Git", "GitHub", "AutoCAD", "Figma", "Canva", "Unity"]
     }
   ];
 
@@ -45,7 +46,7 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Arsenal
+          <SectionTitle icon={Swords} title="Buki" kicker="武器" />
         </motion.h2>
 
         <motion.div
