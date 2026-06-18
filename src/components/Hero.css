@@ -66,6 +66,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+  .hero-3d-block {
+    margin-top: 7.5rem;
+  }
 }
 
 /* Absolute glow behind 3D object */
