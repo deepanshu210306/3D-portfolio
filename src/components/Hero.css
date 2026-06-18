@@ -48,7 +48,8 @@
   gap: 0.5rem 1.25rem;
 }
 
-.hero-name-kicker {
+.hero-name-kicker,
+.hero-name-kicker.hover-tooltip-trigger {
   font-size: clamp(1rem, 3.5vw, 2rem);
   font-weight: 400;
   letter-spacing: 0.18em;

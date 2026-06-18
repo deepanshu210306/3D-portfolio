@@ -1,0 +1,69 @@
+.hover-tooltip-trigger {
+  cursor: default;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.hover-tooltip-trigger:hover,
+.hover-tooltip-trigger:focus-visible {
+  border-bottom-color: rgba(230, 57, 70, 0.55);
+  outline: none;
+}
+
+.hover-tooltip {
+  position: fixed;
+  z-index: 10000;
+  pointer-events: none;
+  padding: 0.45rem 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background: rgba(8, 8, 8, 0.94);
+  border: 1px solid rgba(230, 57, 70, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  white-space: nowrap;
+  transform: translate3d(0, 0, 0);
+  animation: tooltipFadeIn 0.15s ease;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 4px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.section-title-label {
+  border-bottom: none;
+}
+
+.section-title-label:hover,
+.section-title-label:focus-visible {
+  border-bottom: none;
+  color: var(--color-text);
+}
+
+.section-title-kicker--tip {
+  cursor: default;
+}
+
+.nav-item .hover-tooltip-trigger {
+  border-bottom: none;
+}
+
+.nav-item:hover .hover-tooltip-trigger {
+  color: var(--color-text);
+}
+
+.hero-name-kicker.hover-tooltip-trigger:hover {
+  color: var(--color-accent);
+}

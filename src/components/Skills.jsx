@@ -46,7 +46,7 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <SectionTitle icon={Swords} title="Buki" kicker="武器" />
+          <SectionTitle icon={Swords} title="Buki" kicker="武器" english="Arsenal" />
         </motion.h2>
 
         <motion.div

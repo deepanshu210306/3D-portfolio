@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import HoverTooltip from './HoverTooltip';
 import './Navbar.css';
+
+const navLinks = [
+  { href: '#about', label: 'Michi', english: 'The Path' },
+  { href: '#internship', label: 'Shugyō', english: 'Training' },
+  { href: '#skills', label: 'Buki', english: 'Arsenal' },
+  { href: '#projects', label: 'Senji', english: 'Campaigns' },
+  { href: '#contact', label: 'Renraku', english: 'Contact' },
+];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,11 +29,11 @@ const Navbar = () => {
           <span className="brand-dot">.</span>
         </a>
         <div className="nav-menu">
-          <a href="#about" className="nav-item">Michi</a>
-          <a href="#internship" className="nav-item">Shugyō</a>
-          <a href="#skills" className="nav-item">Buki</a>
-          <a href="#projects" className="nav-item">Senji</a>
-          <a href="#contact" className="nav-item">Renraku</a>
+          {navLinks.map((item) => (
+            <a href={item.href} className="nav-item" key={item.href}>
+              <HoverTooltip label={item.english}>{item.label}</HoverTooltip>
+            </a>
+          ))}
         </div>
       </div>
     </nav>

@@ -15,7 +15,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <SectionTitle icon={SquareTerminal} title="Michi" kicker="道" />
+          <SectionTitle icon={SquareTerminal} title="Michi" kicker="道" english="The Path" />
         </motion.h2>
 
         <div className="about-grid">

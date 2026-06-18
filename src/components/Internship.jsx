@@ -57,7 +57,7 @@ const Internship = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <SectionTitle icon={Swords} title="Shugyō" kicker="修行" />
+          <SectionTitle icon={Swords} title="Shugyō" kicker="修行" english="Training" />
         </motion.h2>
 
         <div className="internship-grid">

@@ -15,7 +15,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <SectionTitle icon={Scroll} title="Renraku" kicker="連絡" />
+          <SectionTitle icon={Scroll} title="Renraku" kicker="連絡" english="Contact" />
         </motion.h2>
 
         <motion.div

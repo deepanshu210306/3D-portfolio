@@ -60,7 +60,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <SectionTitle icon={SwatchBook} title="Senji" kicker="戦事" />
+          <SectionTitle icon={SwatchBook} title="Senji" kicker="戦事" english="Campaigns" />
         </motion.h2>
 
         <div className="projects-grid">

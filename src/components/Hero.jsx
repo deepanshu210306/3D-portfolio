@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Avatar3D from './Avatar3D';
+import HoverTooltip from './HoverTooltip';
 import './Hero.css';
 
 const Hero = () => {
@@ -16,7 +17,9 @@ const Hero = () => {
             <div className="hero-kicker">IIT Delhi Engineer</div>
             <h1 className="hero-name">
               Deepanshu
-              <span className="hero-name-kicker">ディーパンシュ</span>
+              <HoverTooltip label="Deepanshu" className="hero-name-kicker">
+                ディーパンシュ
+              </HoverTooltip>
             </h1>
             <p className="hero-subtext">
               Forging digital experiences with precision. Web Development, Game Engines, and Architectures.
