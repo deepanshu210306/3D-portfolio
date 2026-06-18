@@ -50,7 +50,7 @@ const Contact = () => {
             <a href="https://www.linkedin.com/in/deephisariya/" target="_blank" rel="noopener noreferrer" className="social-item">
               <Linkedin size={20} /> LinkedIn
             </a>
-            <a href="https://leetcode.com/u/deep_hisariya/" target="_blank" rel="noopener noreferrer" className="social-item">
+            <a href="https://leetcode.com/u/deephisariya/" target="_blank" rel="noopener noreferrer" className="social-item">
               <Code size={20} /> LeetCode
             </a>
           </motion.div>
