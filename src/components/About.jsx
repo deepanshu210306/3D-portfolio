@@ -51,11 +51,11 @@ const About = () => {
               <p className="leadership-meta">Energy Society, IIT Delhi <span>[May 2026 - Present]</span></p>
             </div>
             <div className="leadership-item">
-              <h4>Design and Operations Coordinator</h4>
+              <h4>Coordinator</h4>
               <p className="leadership-meta">Energy Society, IIT Delhi <span>[Jun 2025 - Apr 2026]</span></p>
             </div>
             <div className="leadership-item">
-              <h4>Operations Executive</h4>
+              <h4>Executive</h4>
               <p className="leadership-meta">Energy Society, IIT Delhi <span>[Jul 2024 - Jun 2025]</span></p>
             </div>
             <p className="leadership-summary">

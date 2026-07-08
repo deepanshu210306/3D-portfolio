@@ -12,15 +12,16 @@ const internships = [
     period: 'May 2026 - Jul 2026',
     intro: (
       <>
-        Building <strong>DataSense</strong>—a chat interface that answers questions about Indian
-        government open datasets, grounded in live rows from data.gov.in and streamed through Groq.
+        Building <strong>DataSense</strong>—an AI chat interface over India's open government data
+        portal (data.gov.in, 236K+ datasets) that turns plain-English questions into answers grounded
+        in live Census, agriculture, and price data.
       </>
     ),
     highlights: [
-      'Architected a RAG pipeline on Groq Llama 3.1 70B after benchmarking six LLM providers (OpenAI, Claude, Gemini, Mistral) on cost and latency—Groq\'s LPU inference runs ~5–10× faster than GPU-based options.',
-      'Integrated the data.gov.in REST API to ground answers in live Census 2011 data, with a fallback fetch layer and context-window trimming to limit hallucinations.',
-      'Shipped token-level SSE streaming with exponential-backoff retries so rate limits never break the chat flow.',
-      'Built a full-stack Next.js + TypeScript app with server-side API key isolation and production cost/scaling modeled for up to 50K monthly users.',
+      'Built an AI chat interface over India\'s open government data portal (data.gov.in, 236K+ datasets) using Next.js and TypeScript, enabling plain-English queries against live Census, agriculture, and price data.',
+      'Designed a dynamic dataset resolution pipeline where users connect any dataset at runtime via URL or resource ID, eliminating code changes or redeployments for onboarding new data sources.',
+      'Evaluated 6 LLM providers on latency, cost, and structured-data accuracy; selected Groq (Llama 3.1 70B) achieving sub-500ms first-token response at 1/8th the cost of GPT-4o-class models.',
+      'Implemented JWT authentication (NextAuth.js), MongoDB persistence for conversation history, token-level SSE streaming, and a mode-classified prompt system routing queries across CASUAL, META, and ANALYSIS response formats.',
     ],
     link: {
       label: 'DataSense',
