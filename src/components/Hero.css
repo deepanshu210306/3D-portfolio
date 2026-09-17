@@ -4,6 +4,42 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+}
+
+/* Background artwork */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/samurai%20town.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -2;
+}
+
+/* Readability scrim over the artwork */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(3, 3, 3, 0.82) 0%,
+      rgba(3, 3, 3, 0.4) 28%,
+      rgba(3, 3, 3, 0.55) 70%,
+      var(--color-bg) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(3, 3, 3, 0.88) 0%,
+      rgba(3, 3, 3, 0.45) 50%,
+      rgba(3, 3, 3, 0.15) 100%
+    );
+  z-index: -1;
 }
 
 .hero-layout {
@@ -23,7 +59,13 @@
 }
 
 .hero-text-block {
+  position: relative;
   z-index: 10;
+}
+
+.hero-text-block h1,
+.hero-text-block p {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.8);
 }
 
 .hero-kicker {
@@ -102,17 +144,24 @@
   }
 }
 
-/* Absolute glow behind 3D object */
+/* Dark halo + accent glow so the katana reads over the artwork */
 .hero-3d-block::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(230,57,70,0.1) 0%, rgba(0,0,0,0) 70%);
-  filter: blur(40px);
+  width: 620px;
+  height: 620px;
+  background:
+    radial-gradient(
+      circle,
+      rgba(3, 3, 3, 0.88) 0%,
+      rgba(3, 3, 3, 0.6) 42%,
+      rgba(3, 3, 3, 0) 72%
+    ),
+    radial-gradient(circle, rgba(230, 57, 70, 0.18) 0%, rgba(0, 0, 0, 0) 65%);
+  filter: blur(30px);
   z-index: -1;
 }
 
@@ -142,12 +191,26 @@
 
 /* Mobile Overrides */
 @media (max-width: 768px) {
+  .hero::before {
+    background-position: 65% 25%;
+    opacity: 0.4;
+  }
+  .hero::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(3, 3, 3, 0.85) 0%,
+        rgba(3, 3, 3, 0.6) 35%,
+        rgba(3, 3, 3, 0.75) 75%,
+        var(--color-bg) 100%
+      );
+  }
   .hero-3d-block {
     height: 350px;
   }
   .hero-3d-block::before {
-    width: 250px;
-    height: 250px;
+    width: 380px;
+    height: 380px;
   }
   .hero-actions {
     flex-direction: column;
