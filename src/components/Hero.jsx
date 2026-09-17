@@ -4,14 +4,14 @@ import Avatar3D from './Avatar3D';
 import HoverTooltip from './HoverTooltip';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ ready = true }) => {
   return (
     <section id="home" className="hero">
       <div className="container hero-layout">
         <div className="hero-text-block">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <div className="hero-kicker">IIT Delhi Engineer</div>
@@ -31,10 +31,13 @@ const Hero = () => {
           </motion.div>
         </div>
 
+        {/* Only opacity and translation here: R3F measures the canvas with
+            getBoundingClientRect, so scaling this wrapper would make it size
+            the drawing buffer to the mid-animation scale and then snap. */}
         <motion.div
           className="hero-3d-block"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 24 }}
+          animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 1.5, delay: 0.3 }}
         >
           <Avatar3D />

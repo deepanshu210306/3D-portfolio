@@ -1,0 +1,180 @@
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.intro-stage {
+  position: absolute;
+  inset: 0;
+}
+
+/* Seamless curtain shown until the blade has crossed. */
+.intro-fill {
+  position: absolute;
+  inset: 0;
+  background: #050505;
+  overflow: hidden;
+}
+
+/* --- Curtain halves, split along the slash line --- */
+/* Edges overlap slightly so no gap shows between them. The mark is drawn in
+   both halves, so this band double-composites into a hot line along the cut
+   -- which is why the halves only appear once the blade has struck. */
+.intro-panel {
+  position: absolute;
+  inset: 0;
+  background: #050505;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.intro-panel--top {
+  clip-path: polygon(0 0, 100% 0, 100% 38.3%, 0 62.3%);
+}
+
+.intro-panel--bottom {
+  clip-path: polygon(0 61.7%, 100% 37.7%, 100% 100%, 0 100%);
+}
+
+/* --- Centre mark (one copy per curtain half) --- */
+.intro-mark {
+  position: absolute;
+  inset: 0;
+}
+
+.intro-mark-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.intro-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(217, 4, 41, 0.22) 0%, transparent 58%);
+}
+
+.intro-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(240px, 32vw, 440px);
+  aspect-ratio: 1;
+  margin: 0;
+  translate: -50% -50%;
+  border: 1px solid rgba(217, 4, 41, 0.22);
+  border-top-color: rgba(217, 4, 41, 0.55);
+  border-radius: 50%;
+}
+
+.intro-kanji {
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 14vw, 11rem);
+  line-height: 1;
+  color: var(--color-accent);
+  text-shadow: 0 0 70px rgba(217, 4, 41, 0.5);
+}
+
+.intro-name {
+  font-family: var(--font-heading);
+  font-size: clamp(0.85rem, 2.2vw, 1.3rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  /* Offsets the trailing letter-space so the word stays optically centred. */
+  text-indent: 0.275em;
+}
+
+.intro-rule {
+  width: clamp(130px, 24vw, 280px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(217, 4, 41, 0.9), transparent);
+  transform-origin: center;
+}
+
+/* --- The cut line: wrapper rotation aligns every child to the clip-path --- */
+.intro-slash-wrap {
+  position: absolute;
+  top: 50.3%;
+  left: -20%;
+  width: 140%;
+  height: 3px;
+  transform: rotate(-7.7deg);
+}
+
+.intro-guide {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1px;
+  height: 1px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, transparent, var(--color-accent) 15%, var(--color-accent) 85%, transparent);
+  box-shadow: 0 0 14px rgba(217, 4, 41, 0.8);
+}
+
+.intro-slash {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  background: linear-gradient(90deg, transparent, #ffffff 12%, #ffffff 88%, transparent);
+  box-shadow:
+    0 0 14px rgba(255, 255, 255, 0.95),
+    0 0 50px rgba(217, 4, 41, 0.8);
+}
+
+.intro-shockwave {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55) 20%, rgba(255, 255, 255, 0.55) 80%, transparent);
+  filter: blur(6px);
+}
+
+.intro-ember {
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  background: #fff5e6;
+  box-shadow: 0 0 8px rgba(255, 176, 96, 0.95);
+}
+
+.intro-flash {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+}
+
+.intro-skip {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.32);
+}
+
+@media (max-width: 768px) {
+  .intro-panel--top {
+    clip-path: polygon(0 0, 100% 0, 100% 44.3%, 0 56.3%);
+  }
+
+  .intro-panel--bottom {
+    clip-path: polygon(0 55.7%, 100% 43.7%, 100% 100%, 0 100%);
+  }
+
+  .intro-slash-wrap {
+    transform: rotate(-13.5deg);
+  }
+}

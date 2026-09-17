@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -7,11 +7,26 @@ import Internship from './components/Internship';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Intro from './components/Intro';
 import { Volume2, VolumeX } from 'lucide-react';
 
 function App() {
   const bgmRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [introPlaying, setIntroPlaying] = useState(true);
+  const [heroReady, setHeroReady] = useState(false);
+
+  const handleIntroReveal = useCallback(() => setHeroReady(true), []);
+  const handleIntroFinish = useCallback(() => setIntroPlaying(false), []);
+
+  useEffect(() => {
+    if (!introPlaying) {
+      document.body.style.overflow = '';
+      return;
+    }
+    window.scrollTo(0, 0);
+    document.body.style.overflow = 'hidden';
+  }, [introPlaying]);
 
   useEffect(() => {
     // Try to auto-play or play on first interaction
@@ -50,6 +65,10 @@ function App() {
 
   return (
     <div className="app-container">
+      {introPlaying && (
+        <Intro onReveal={handleIntroReveal} onFinish={handleIntroFinish} />
+      )}
+
       {/* Background Music Player */}
       <audio ref={bgmRef} src="/kaze-no-kata.mp3" loop />
       
@@ -69,7 +88,7 @@ function App() {
 
       <Navbar />
       <main>
-        <Hero />
+        <Hero ready={heroReady} />
         <About />
         <Internship />
         <Skills />
